@@ -4,13 +4,13 @@ var webpack = require('webpack');
 module.exports = {
   devtool:'eval',
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:3000',
+    'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './src/app'
+    './src/app.jsx'
   ],
   output: {
-    path: path.join(__dirname,'./dist'),
-    filename: "bundle.js",
+    path: path.join(__dirname, 'dist'),
+    filename: "app.js",
     publicPath: '/static/'
   },
   plugins: [
@@ -19,16 +19,12 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.jsx?$/,
-      exclude: /(node_modules|bower_components)/,
+      exclude: /node_modules/,
       loaders: ['react-hot', 'babel'],
       include: path.join(__dirname, 'src')
     }, {
       test: /\.scss$/,
-      loader: ["style", "css", "sass"]
+      loaders: ["style", "css", "sass"]
     }]
-  },
-  resolve111: {
-    modulesDirectories: ['node_modules'],
-    extensions: ['', '.js','.jsx']
-  },
+  }
 };
