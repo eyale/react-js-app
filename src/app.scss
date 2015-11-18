@@ -1,3 +1,74 @@
-@import './styles/normalize.css'
+@import './styles/normalize.css';
 
-
+body {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  .form-control {
+    border-radius: 0!important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  label,
+  small,
+  span,
+  a,
+  p {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    color: rgba(0, 0, 0, 1)!important;
+    line-height: 1.5;
+  }
+  .dropdown-menu {
+    li {
+      a {
+        font-weight: 300;
+      }
+    }
+  }
+  .pagination>li>a,
+  .pagination>li>span {
+    color: rgba(0, 0, 0, 1)!important;
+  }
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+  header {
+    nav {
+      background: rgba(255, 255, 255, 1)!important;
+      margin: 0!important;
+      border-radius: 0px!important;
+      border: none!important;
+    }
+  }
+  .slider {
+    margin-bottom: 50px;
+    height: 500px;
+    .item {
+      height: 500px;
+      a {
+        img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      p {
+        font-size: 3rem;
+        color: white!important;
+        text-shadow: 4px 3px 6px black;
+      }
+    }
+  }
+}
